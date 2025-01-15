@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const baseUrl = '/taps-dataset';
 
-    fetch('components/sidebar.html')
     fetch(`${baseUrl}/components/sidebar.html`)
         .then(data => {
             document.getElementById('sidebar-container').innerHTML = data;
