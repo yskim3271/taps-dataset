@@ -15,12 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 네비게이션 아이템 스타일링
             const navItems = document.querySelectorAll('.nav-item');
             navItems.forEach(item => {
-                // 경로 업데이트
-                const href = item.getAttribute('href');
-                if (href && href.startsWith('/')) {
-                    item.setAttribute('href', `${baseUrl}${href}`);
-                }
-                
+
                 if (item.dataset.page === currentPage) {
                     item.classList.add('bg-gray-800', 'text-white');
                 } else {
