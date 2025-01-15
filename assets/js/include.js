@@ -1,10 +1,10 @@
-// assets/js/include.js
 document.addEventListener('DOMContentLoaded', function() {
+    // GitHub Pages의 repository 이름을 고려한 경로 설정
+    const baseUrl = '/taps-dataset'; // repository 이름에 맞게 수정
+    
     // 사이드바 로드
-
-    const baseUrl = '/taps-dataset';
-
     fetch(`${baseUrl}/components/sidebar.html`)
+        .then(response => response.text())
         .then(data => {
             document.getElementById('sidebar-container').innerHTML = data;
             
@@ -15,31 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
             // 네비게이션 아이템 스타일링
             const navItems = document.querySelectorAll('.nav-item');
             navItems.forEach(item => {
-                // 기본 스타일 적용
-                item.classList.add('flex', 'items-center', 'px-3', 'py-2', 'rounded-lg', 'text-sm');
+                // Update href paths
+                const href = item.getAttribute('href');
+                if (href && href.startsWith('/')) {
+                    item.setAttribute('href', `${baseUrl}${href}`);
+                }
                 
                 if (item.dataset.page === currentPage) {
-                    // 활성 아이템 스타일
                     item.classList.add('bg-gray-800', 'text-white');
-                    // 해당 섹션 열기
-                    const section = item.dataset.section;
-                    if (section) {
-                        openSection(section);
-                    }
                 } else {
-                    // 비활성 아이템 스타일
                     item.classList.add('text-gray-400', 'hover:bg-gray-800', 'hover:text-white');
                 }
             });
-
-            // 섹션 토글 기능 추가
-            const sectionButtons = document.querySelectorAll('.nav-section');
-            sectionButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const section = button.dataset.section;
-                    toggleSection(section);
-                });
-            });
+        })
+        .catch(error => {
+            console.error('Error loading sidebar:', error);
+            document.getElementById('sidebar-container').innerHTML = 
+                '<p class="text-red-500 p-4">Error loading sidebar. Please refresh the page.</p>';
         });
 });
 
