@@ -1,8 +1,11 @@
 // assets/js/include.js
 document.addEventListener('DOMContentLoaded', function() {
     // 사이드바 로드
+
+    const baseUrl = '/taps-dataset';
+
     fetch('components/sidebar.html')
-        .then(response => response.text())
+    fetch(`${baseUrl}/components/sidebar.html`)
         .then(data => {
             document.getElementById('sidebar-container').innerHTML = data;
             
