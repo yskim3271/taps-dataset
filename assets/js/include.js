@@ -1,7 +1,7 @@
 // assets/js/include.js
 document.addEventListener('DOMContentLoaded', function() {
     // 사이드바 로드
-    fetch('/components/sidebar.html')
+    fetch('components/sidebar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('sidebar-container').innerHTML = data;
