@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 네비게이션 아이템 스타일링
             const navItems = document.querySelectorAll('.nav-item');
             navItems.forEach(item => {
-                // Update href paths
+                // 경로 업데이트
                 const href = item.getAttribute('href');
                 if (href && href.startsWith('/')) {
                     item.setAttribute('href', `${baseUrl}${href}`);
@@ -30,8 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error loading sidebar:', error);
-            document.getElementById('sidebar-container').innerHTML = 
-                '<p class="text-red-500 p-4">Error loading sidebar. Please refresh the page.</p>';
+            document.getElementById('sidebar-container').innerHTML = `
+                <div class="p-4 text-red-500">
+                    <p>Error loading sidebar: ${error.message}</p>
+                    <p>Path: ${baseUrl}/components/sidebar.html</p>
+                </div>
+            `;
         });
 });
 
