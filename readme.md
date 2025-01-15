@@ -1,40 +1,61 @@
+# TAPS Dataset Website
+
+This is the official website for the TAPS (Throat and Acoustic Pairing Speech Dataset) project. The website provides comprehensive documentation and information about the dataset.
+
+## Website Structure
 project-root/
-│
-├── index.html              # 메인 페이지
-├── pages/                  # 각 페이지 HTML 파일들
+├── index.html              # Main page
+├── pages/                  # Page HTML files
 │   ├── about.html
 │   ├── documentation.html
-│   │   ├── hardware.html   # 하드웨어 관련 문서
-│   │   ├── software.html  # 소프트웨어 관련 문서
-│   │   ├── recording.html  # 녹음 관련 문서
-│   │   └── postprocessing.html  # 후처리 관련 문서
+│   │   ├── hardware.html   # Hardware documentation
+│   │   ├── software.html   # Software documentation
+│   │   ├── recording.html  # Recording documentation
+│   │   └── postprocessing.html  # Post-processing documentation
 │   ├── speechenhancement.html
-│   │   └── baselines.html      # TMSE 관련 문서
+│   │   └── baselines.html      # TMSE documentation
 │   ├── download.html
 │   ├── credits.html
 │   └── license.html
-│
-├── assets/                 # 정적 자원들
-│   ├── css/               # 스타일시트 파일들
-│   │   ├── main.css      # 메인 스타일
-│   │   ├── layout.css    # 레이아웃 관련 스타일
-│   │   └── components.css # 재사용 가능한 컴포넌트 스타일
-│   │
-│   ├── js/                # 자바스크립트 파일들
-│   │   ├── main.js       # 메인 스크립트
-│   │   └── utils.js      # 유틸리티 함수들
-│   │
-│   ├── images/            # 이미지 파일들
-│   │   ├── logo.png
-│   │   └── icons/
-│   │
-│   └── fonts/             # 폰트 파일들
-│
-├── components/             # 재사용 가능한 HTML 컴포넌트들
-│   ├── header.html
-│   ├── footer.html
-│   └── sidebar.html
-│
-└── docs/                   # 문서화 관련 파일들
-    ├── README.md
-    └── CONTRIBUTING.md
+├── assets/                 # Static resources
+│   ├── css/               # Stylesheets
+│   ├── js/                # JavaScript files
+│   └── images/            # Images and icons
+└── components/            # Reusable HTML components
+└── sidebar.html
+
+## Technologies Used
+
+- HTML5
+- Tailwind CSS
+- JavaScript
+- Font Awesome Icons
+- GitHub Pages
+
+## Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/hina3271/taps-dataset.git
+cd taps-dataset
+```
+2. Run a local server:
+```bash
+# Using Python
+python -m http.server 8000
+
+# Or using Node.js
+npx serve
+```
+3. Open http://localhost:8000 in your browser
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (git checkout -b feature/AmazingFeature)
+3. Commit your changes (git commit -m 'Add some AmazingFeature')
+4. Push to the branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+
+## License
+This website is released under the MIT License.
