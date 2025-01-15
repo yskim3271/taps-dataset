@@ -3,26 +3,50 @@
 This is the official website for the TAPS (Throat and Acoustic Pairing Speech Dataset) project. The website provides comprehensive documentation and information about the dataset.
 
 ## Website Structure
+# TAPS Dataset Website
+
+This is the official website for the TAPS (Throat and Acoustic Pairing Speech Dataset) project. The website provides comprehensive documentation and information about the dataset.
+
+## Website Structure
+
+```plaintext
 project-root/
-├── index.html              # Main page
-├── pages/                  # Page HTML files
+│
+├── index.html              # 메인 페이지
+├── pages/                  # 각 페이지 HTML 파일들
 │   ├── about.html
 │   ├── documentation.html
-│   │   ├── hardware.html   # Hardware documentation
-│   │   ├── software.html   # Software documentation
-│   │   ├── recording.html  # Recording documentation
-│   │   └── postprocessing.html  # Post-processing documentation
+│   │   ├── hardware.html
+│   │   ├── software.html
+│   │   ├── recording.html
+│   │   └── postprocessing.html
 │   ├── speechenhancement.html
-│   │   └── baselines.html      # TMSE documentation
+│   │   └── baselines.html
 │   ├── download.html
 │   ├── credits.html
 │   └── license.html
-├── assets/                 # Static resources
-│   ├── css/               # Stylesheets
-│   ├── js/                # JavaScript files
-│   └── images/            # Images and icons
-└── components/            # Reusable HTML components
-└── sidebar.html
+│
+├── assets/                 # 정적 자원들
+│   ├── css/               # 스타일시트 파일들
+│   │   ├── main.css
+│   │   ├── layout.css
+│   │   └── components.css
+│   │
+│   ├── js/                # 자바스크립트 파일들
+│   │   ├── main.js
+│   │   └── utils.js
+│   │
+│   └── images/            # 이미지 파일들
+│       ├── logo.png
+│       └── icons/
+│
+├── components/             # 재사용 가능한 HTML 컴포넌트들
+│   └── sidebar.html
+│
+└── docs/                   # 문서화 관련 파일들
+   ├── README.md
+   └── CONTRIBUTING.md
+```
 
 ## Technologies Used
 
