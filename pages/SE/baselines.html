@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPS Dataset - Baseline Models</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="/assets/js/include.js"></script>
+
+</head>
+<body class="bg-gray-50" data-page="baselines" data-section="enhancement">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="ml-64 flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <header class="mb-12">
+                    <div class="flex items-center gap-2 text-sm text-gray-600 mb-4">
+                        <a href="../speechenhancement.html" class="hover:text-blue-600">Speech Enhancement</a>
+                        <i class="fas fa-chevron-right text-xs"></i>
+                        <span class="text-gray-900">Baseline Models</span>
+                    </div>
+                    <h1 class="text-4xl font-light mb-6">Baseline Models</h1>
+                    <p class="text-xl text-gray-600">
+                        Detailed information about baseline models, their implementations, and performance results.
+                    </p>
+                </header>
+
+                <!-- Model Architecture Section -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Model Architectures</h2>
+                    
+                    <!-- SE-Conformer -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-6 overflow-hidden">
+                        <div class="border-b border-gray-200 bg-gray-50 px-6 py-4">
+                            <h3 class="text-xl font-semibold flex items-center">
+                                <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                SE-Conformer
+                                <span class="ml-3 text-sm text-green-600 font-normal">Best Performance</span>
+                            </h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <p class="text-gray-600">
+                                    A speech enhancement model combining convolutional neural networks with the Conformer architecture.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-medium mb-2">Model Parameters</h4>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>• Input dimension: 512</li>
+                                            <li>• FFN dimension: 64</li>
+                                            <li>• Attention heads: 4</li>
+                                            <li>• Convolution kernel: 15</li>
+                                            <li>• Conformer depth: 4</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-medium mb-2">Key Features</h4>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>• Multi-head self-attention</li>
+                                            <li>• Convolution modules</li>
+                                            <li>• Feed-forward networks</li>
+                                            <li>• Layer normalization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demucs -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-6 overflow-hidden">
+                        <div class="border-b border-gray-200 bg-gray-50 px-6 py-4">
+                            <h3 class="text-xl font-semibold">Demucs</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <p class="text-gray-600">
+                                    Multi-layer convolutional encoder-decoder architecture with U-Net-style skip connections.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-medium mb-2">Model Parameters</h4>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>• Kernel size: 8</li>
+                                            <li>• Hidden channels: 64</li>
+                                            <li>• Stride: 2</li>
+                                            <li>• Depth: 5</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-medium mb-2">Architecture</h4>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>• Convolutional encoder-decoder</li>
+                                            <li>• Bi-directional LSTM</li>
+                                            <li>• GLU activation</li>
+                                            <li>• Skip connections</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TSTNN -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="border-b border-gray-200 bg-gray-50 px-6 py-4">
+                            <h3 class="text-xl font-semibold">TSTNN</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <p class="text-gray-600">
+                                    Transformer-based model for end-to-end speech enhancement in the time domain.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-medium mb-2">Components</h4>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>• Encoder with dilated dense blocks</li>
+                                            <li>• Two-stage transformer module</li>
+                                            <li>• Masking module</li>
+                                            <li>• Decoder with sub-pixel convolution</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-medium mb-2">Processing</h4>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>• Local-global feature processing</li>
+                                            <li>• Multi-head attention</li>
+                                            <li>• GRU layers</li>
+                                            <li>• Group normalization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Performance Results -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Performance Results</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="px-6 py-4 border-b border-gray-200 bg-gray-50">
+                            <h3 class="text-lg font-semibold">Evaluation Metrics</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200">
+                                    <thead>
+                                        <tr class="bg-gray-50">
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Model</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PESQ</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">STOI</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CER (%)</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">WER (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Throat Mic</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1.22</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">0.70</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">84.4</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">92.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">TSTNN</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2.00</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">0.89</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">25.7</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">54.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Demucs</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1.86</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">0.89</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">17.1</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">47.8</td>
+                                        </tr>
+                                        <tr class="bg-green-50">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">SE-Conformer</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2.08</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">0.90</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">12.5</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">43.3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Implementation Details -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Implementation Details</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Training Configuration</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Epochs: 200</li>
+                                        <li>• Optimizer: Adam (lr=3e-4)</li>
+                                        <li>• Batch size: 16</li>
+                                        <li>• Segment length: 2 seconds</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Loss Functions</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• L1 loss on waveform</li>
+                                        <li>• Multi-resolution STFT loss</li>
+                                        <li>• Time-frequency domain loss</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Code and Resources -->
+                <section class="mb-12 bg-blue-50 rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4">Code and Resources</h2>
+                    <div class="space-y-4">
+                        <p>Access our implementation and experiment with the baseline models:</p>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center text-blue-600 hover:text-blue-700">
+                                <a href="#" class="flex items-center text-blue-600 hover:text-blue-700">
+                                    <i class="fab fa-github mr-2"></i>
+                                    GitHub Repository - Complete Implementation
+                                </a>
+                                <a href="#" class="flex items-center text-blue-600 hover:text-blue-700">
+                                    <i class="fas fa-cube mr-2"></i>
+                                    Pre-trained Model Weights
+                                </a>
+                                <a href="#" class="flex items-center text-blue-600 hover:text-blue-700">
+                                    <i class="fas fa-book mr-2"></i>
+                                    Documentation and Usage Guide
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+    
+                    <!-- Navigation Footer -->
+                    <footer class="border-t border-gray-200 pt-8 mt-12">
+                        <div class="flex justify-between items-center">
+                            <a href="overview_se.html" class="text-blue-500 hover:text-blue-600 flex items-center">
+                                <i class="fas fa-arrow-left mr-2"></i>
+                                Back to Overview
+                            </a>
+                        </div>
+                    </footer>
+                </div>
+            </main>
+        </div>
+    </body>
+    </html>

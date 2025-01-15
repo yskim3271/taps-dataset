@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPS Dataset - Software Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="/assets/js/include.js"></script>
+
+</head>
+<body class="bg-gray-50" data-page="software" data-section="documentation" >
+    <div class="flex min-h-screen">
+        <!-- Sidebar (Same as before with updated active state) -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="ml-64 flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <header class="mb-12">
+                    <div class="flex items-center gap-2 text-sm text-gray-600 mb-4">
+                        <a href="../documentation.html" class="hover:text-blue-600">Documentation</a>
+                        <i class="fas fa-chevron-right text-xs"></i>
+                        <span class="text-gray-900">Software</span>
+                    </div>
+                    <h1 class="text-4xl font-light mb-6">Software Architecture</h1>
+                    <p class="text-xl text-gray-600">
+                        Overview of the software infrastructure, data processing pipelines, and utilities used in the TAPS dataset.
+                    </p>
+                </header>
+
+                <!-- Data Processing Pipeline -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Data Processing Pipeline</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Signal Processing</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 5th-order Butterworth high-pass filter (50Hz cutoff)</li>
+                                        <li>• DC offset removal</li>
+                                        <li>• Signal normalization</li>
+                                        <li>• Timing synchronization between devices</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Data Formats</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• WAV files (32-bit)</li>
+                                        <li>• Throat mic: 8kHz sampling rate</li>
+                                        <li>• Acoustic mic: 16kHz sampling rate</li>
+                                        <li>• Standard file naming convention</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Software Tools -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Software Tools</h2>
+                    
+                    <!-- Data Collection Software -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-database text-2xl text-blue-500 mr-3"></i>
+                                <h3 class="text-xl font-semibold">Data Collection Software</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-gray-600">
+                                    Custom-built software for simultaneous recording from throat and acoustic microphones.
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-medium mb-2">Features</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Real-time monitoring</li>
+                                        <li>• Automatic file naming and organization</li>
+                                        <li>• Recording quality validation</li>
+                                        <li>• Session management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Processing Tools -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-cogs text-2xl text-blue-500 mr-3"></i>
+                                <h3 class="text-xl font-semibold">Data Processing Tools</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-gray-600">
+                                    Suite of tools for data preprocessing, validation, and analysis.
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-medium mb-2">Capabilities</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Automatic signal alignment</li>
+                                        <li>• Noise reduction</li>
+                                        <li>• Quality metrics calculation</li>
+                                        <li>• Batch processing support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Data Structure -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Data Structure</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="prose prose-gray max-w-none">
+                            <h3 class="text-lg font-semibold mb-3">File Organization</h3>
+                            <pre class="bg-gray-50 p-4 rounded-lg text-sm">
+dataset/
+├── train/
+│   ├── speaker_001/
+│   │   ├── p01_u00_mic.wav
+│   │   ├── p01_u00_acc.wav
+│   │   └── ...
+│   └── ...
+├── eval/
+│   ├── speaker_051/
+│   │   ├── p51_u00_mic.wav
+│   │   ├── p51_u00_acc.wav
+│   │   └── ...
+│   └── ...
+└── metadata/
+    ├── transcripts.txt
+    └── speaker_info.json</pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation Footer -->
+                <footer class="border-t border-gray-200 pt-8 mt-12">
+                    <div class="flex justify-between items-center">
+                        <a href="hardware.html" class="text-blue-500 hover:text-blue-600 flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            Previous: Hardware
+                        </a>
+                        <a href="recording.html" class="text-blue-500 hover:text-blue-600 flex items-center">
+                            Next: Recording
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

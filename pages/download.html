@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPS Dataset - Download</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="/assets/js/include.js"></script>
+
+</head>
+<body class="bg-gray-50" data-page="download" data-section="download">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="ml-64 flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <header class="mb-12">
+                    <h1 class="text-4xl font-light mb-6">Download Dataset</h1>
+                    <p class="text-xl text-gray-600">
+                        Access the TAPS dataset through our HuggingFace repository.
+                    </p>
+                </header>
+
+                <!-- Dataset Access -->
+                <section class="mb-12">
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="text-center p-8">
+                            <i class="fab fa-huggingface text-6xl text-gray-700 mb-6"></i>
+                            <h2 class="text-2xl font-semibold mb-4">Access on HuggingFace</h2>
+                            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                                The TAPS dataset is hosted on HuggingFace for easy access and integration. 
+                                Visit our HuggingFace page to download the dataset or use it directly in your projects.
+                            </p>
+                            <a href="https://huggingface.co/datasets/hina3271/TAPS" 
+                               target="_blank"
+                               class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                                Visit HuggingFace Repository
+                                <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Usage Instructions -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Quick Start</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Using Datasets Library</h3>
+                                <div class="bg-gray-50 rounded-lg p-4">
+                                    <pre class="text-sm text-gray-800">
+from datasets import load_dataset
+
+dataset = load_dataset("your-org/TAPS")
+                                    </pre>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Manual Download</h3>
+                                <p class="text-gray-600 mb-4">
+                                    You can also download the dataset directly from the HuggingFace repository page:
+                                </p>
+                                <ol class="list-decimal list-inside space-y-2 text-gray-600">
+                                    <li>Visit the HuggingFace repository link above</li>
+                                    <li>Navigate to the "Files and Versions" tab</li>
+                                    <li>Download the desired dataset files</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dataset Structure -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Dataset Structure</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Training Set</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 50 speakers (25M/25F)</li>
+                                        <li>• 5,000 utterance pairs</li>
+                                        <li>• 12.7 hours of audio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Evaluation Set</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• 10 speakers (5M/5F)</li>
+                                        <li>• 1,000 utterance pairs</li>
+                                        <li>• 2.6 hours of audio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Terms of Use -->
+                <section class="mb-12 bg-blue-50 rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4">Terms of Use</h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-600">By using this dataset, you agree to:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Cite our paper in any resulting publications</li>
+                            <li>Use the dataset only for research purposes</li>
+                            <li>Not redistribute the dataset without permission</li>
+                            <li>Comply with the terms specified in our license</li>
+                        </ul>
+                        <div class="mt-6">
+                            <a href="license.html" class="text-blue-600 hover:text-blue-700 flex items-center">
+                                <i class="fas fa-file-contract mr-2"></i>
+                                View Full License
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Information -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Need Help?</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <p class="text-gray-600 mb-4">
+                            If you have questions about downloading or using the dataset, please reach out to us:
+                        </p>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center text-blue-600 hover:text-blue-700">
+                                <i class="fab fa-github mr-2"></i>
+                                Open an issue on GitHub
+                            </a>
+                            <a href="mailto:contact@example.com" class="flex items-center text-blue-600 hover:text-blue-700">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Email us
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

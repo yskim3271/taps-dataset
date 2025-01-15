@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPS Dataset - Post Processing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="/assets/js/include.js"></script>
+
+</head>
+<body class="bg-gray-50" data-page="postprocessing" data-section="documentation">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="ml-64 flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <header class="mb-12">
+                    <div class="flex items-center gap-2 text-sm text-gray-600 mb-4">
+                        <a href="../documentation.html" class="hover:text-blue-600">Documentation</a>
+                        <i class="fas fa-chevron-right text-xs"></i>
+                        <span class="text-gray-900">Post Processing</span>
+                    </div>
+                    <h1 class="text-4xl font-light mb-6">Post Processing</h1>
+                    <p class="text-xl text-gray-600">
+                        Description of signal processing techniques and data preparation procedures used in the TAPS dataset.
+                    </p>
+                </header>
+
+                <!-- Data Mismatch Section -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Data Mismatch Correction</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="prose prose-gray max-w-none">
+                            <p class="mb-4">
+                                One of the key challenges in creating the TAPS dataset was addressing the timing differences 
+                                between throat microphone and acoustic microphone signals. These mismatches occur due to several factors:
+                            </p>
+                            <ul class="list-disc pl-6 mb-6">
+                                <li>Variations in speakers' larynx and oral structures</li>
+                                <li>Differences in phoneme production locations</li>
+                                <li>Distance between the acoustic microphone and speaker's lips</li>
+                            </ul>
+                            <div class="bg-blue-50 rounded-lg p-6 mb-6">
+                                <h3 class="text-lg font-semibold mb-2">Technical Details</h3>
+                                <p class="text-gray-700">
+                                    For detailed information about data mismatch analysis and correction methods, including:
+                                </p>
+                                <ul class="list-disc pl-6 mt-2 text-gray-700">
+                                    <li>Mismatch variation analysis</li>
+                                    <li>Impact of microphone distance</li>
+                                    <li>Speaker-dependent variations</li>
+                                    <li>Phoneme-dependent timing differences</li>
+                                </ul>
+                                <p class="mt-4">
+                                    Please refer to the "Technical Validation" section of our paper
+                                    <a href="#" class="text-blue-600 hover:text-blue-700">[Link to paper]</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Noise Reduction Section -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Background Noise Reduction</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="prose prose-gray max-w-none">
+                            <p class="mb-4">
+                                To ensure high-quality reference signals, we applied noise reduction to the acoustic 
+                                microphone recordings using the Demucs speech enhancement model.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold mb-2">Process Details</h3>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Used Demucs pretrained causal version</li>
+                                        <li>• Applied to acoustic microphone signals only</li>
+                                        <li>• Preserved original signal characteristics</li>
+                                        <li>• Minimal impact on speech content</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold mb-2">Results</h3>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Reduced background noise</li>
+                                        <li>• Enhanced signal clarity</li>
+                                        <li>• Improved reference quality</li>
+                                        <li>• Maintained natural speech characteristics</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-yellow-50 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold mb-2">Note</h3>
+                                <p class="text-gray-700">
+                                    The noise reduction was applied only to minimize minor background noise in the acoustic 
+                                    microphone recordings. The throat microphone signals were preserved in their original form 
+                                    to maintain the authenticity of the dataset.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Processing Pipeline -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Complete Processing Pipeline</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <ol class="list-decimal list-inside space-y-4 text-gray-600">
+                            <li>
+                                <span class="font-medium">High-pass Filtering</span>
+                                <p class="ml-6 mt-1">Applied 5th-order Butterworth high-pass filter with 50 Hz cut-off frequency to reduce gravitational acceleration effects</p>
+                            </li>
+                            <li>
+                                <span class="font-medium">Timing Alignment</span>
+                                <p class="ml-6 mt-1">Corrected timing differences between throat and acoustic microphone signals</p>
+                            </li>
+                            <li>
+                                <span class="font-medium">Noise Reduction</span>
+                                <p class="ml-6 mt-1">Applied Demucs-based noise reduction to acoustic microphone recordings</p>
+                            </li>
+                            <li>
+                                <span class="font-medium">Trimming</span>
+                                <p class="ml-6 mt-1">Removed silent segments at the beginning and end of recordings</p>
+                            </li>
+                            <li>
+                                <span class="font-medium">Quality Verification</span>
+                                <p class="ml-6 mt-1">Manual review of evaluation set utterances for accuracy</p>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+                <!-- Navigation Footer -->
+                <footer class="border-t border-gray-200 pt-8 mt-12">
+                    <div class="flex justify-between items-center">
+                        <a href="recording.html" class="text-blue-500 hover:text-blue-600 flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            Previous: Recording
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

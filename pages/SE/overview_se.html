@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPS Dataset - Speech Enhancement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="/assets/js/include.js"></script>
+
+</head>
+<body class="bg-gray-50" data-page="se-overview" data-section="enhancement">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="ml-64 flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <header class="mb-12">
+                    <h1 class="text-4xl font-light mb-6">Speech Enhancement</h1>
+                    <p class="text-xl text-gray-600">
+                        Overview of throat microphone speech enhancement task and evaluation metrics.
+                    </p>
+                </header>
+
+                <!-- Task Overview -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Task Overview</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="prose prose-gray max-w-none">
+                            <p class="mb-4">
+                                The TAPS dataset addresses the challenge of enhancing speech quality from throat microphone recordings. 
+                                When speech signals pass through skin and tissues, they experience significant degradation, particularly 
+                                in high-frequency components.
+                            </p>
+                            <div class="bg-gray-50 p-4 rounded-lg mt-6">
+                                <h3 class="text-lg font-medium mb-3">Key Challenges</h3>
+                                <ul class="space-y-2">
+                                    <li>• Loss of high-frequency speech information</li>
+                                    <li>• Attenuation of unvoiced sounds</li>
+                                    <li>• Filtering effects of skin and tissue layers</li>
+                                    <li>• Microphone placement variations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Evaluation Framework -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Evaluation Framework</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Speech Quality Metrics -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                            <h3 class="text-xl font-semibold mb-4">Speech Quality</h3>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• PESQ (Perceptual Evaluation of Speech Quality)</li>
+                                        <li>• STOI (Short-Time Objective Intelligibility)</li>
+                                        <li>• CSIG (Signal Distortion)</li>
+                                        <li>• CBAK (Background Noise)</li>
+                                        <li>• COVL (Overall Quality)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Speech Content Metrics -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                            <h3 class="text-xl font-semibold mb-4">Speech Content</h3>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Character Error Rate (CER)</li>
+                                        <li>• Word Error Rate (WER)</li>
+                                        <li>• Speech-to-Text Accuracy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Baseline Results Overview -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Results Overview</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <p class="text-gray-600 mb-6">
+                            Our baseline models demonstrate significant improvements in both speech quality and content preservation.
+                            Detailed results and model implementations can be found in our baselines documentation.
+                        </p>
+                        <a href="baselines.html" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                            View Baseline Models
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Research Opportunities -->
+                <section class="mb-12 bg-blue-50 rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4">Research Opportunities</h2>
+                    <div class="space-y-4">
+                        <p>The TAPS dataset opens up several research directions:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Advanced model architectures for speech enhancement</li>
+                            <li>Multi-task learning approaches</li>
+                            <li>Novel loss functions for better high-frequency reconstruction</li>
+                            <li>Real-time enhancement solutions</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

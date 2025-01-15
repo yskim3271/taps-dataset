@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPS Dataset - Recording</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="/assets/js/include.js"></script>
+
+</head>
+<body class="bg-gray-50" data-page="recording" data-section="documentation">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="ml-64 flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <header class="mb-12">
+                    <div class="flex items-center gap-2 text-sm text-gray-600 mb-4">
+                        <a href="../documentation.html" class="hover:text-blue-600">Documentation</a>
+                        <i class="fas fa-chevron-right text-xs"></i>
+                        <span class="text-gray-900">Recording</span>
+                    </div>
+                    <h1 class="text-4xl font-light mb-6">Recording Environment</h1>
+                    <p class="text-xl text-gray-600">
+                        Detailed information about the recording environment and session protocols used in the TAPS dataset collection.
+                    </p>
+                </header>
+
+                <!-- Recording Environment -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Recording Environment Setup</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Room Configuration</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Semi-soundproof room at POSTECH</li>
+                                        <li>• Forehead rest for consistent positioning</li>
+                                        <li>• Reflection filter for ambient noise reduction</li>
+                                        <li>• DC battery powered system</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Equipment Placement</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Throat mic on supraglottic area</li>
+                                        <li>• Acoustic mic 30cm from speaker</li>
+                                        <li>• Nylon filter for pop noise prevention</li>
+                                        <li>• Fixed head position setup</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Microphone Setup -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Microphone Configuration</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Throat Microphone Positioning</h3>
+                                <p class="text-gray-600 mb-4">
+                                    The throat microphone was carefully positioned on the supraglottic area to capture vocal cord vibrations effectively.
+                                </p>
+                                <div class="bg-blue-50 rounded-lg p-4">
+                                    <p class="text-gray-700">
+                                        <i class="fas fa-info-circle mr-2"></i>
+                                        Proper placement is crucial for capturing both vocal cord vibrations and essential speech formants.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Acoustic Microphone Setup</h3>
+                                <p class="text-gray-600 mb-4">
+                                    The acoustic microphone was positioned with specific considerations for optimal recording quality.
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Distance: 30 cm from speaker's face</li>
+                                        <li>• Nylon filter installation</li>
+                                        <li>• Pop noise prevention measures</li>
+                                        <li>• Ambient noise reduction setup</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recording Session -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Recording Session Protocol</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Script Selection</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Scripts were extracted from the Korean newspaper corpus provided by the National Institute of Korean Language.
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <ul class="space-y-2 text-sm">
+                                        <li>• Source: 2023 newspaper articles</li>
+                                        <li>• Sentence length: 40-80 characters</li>
+                                        <li>• Various topics covered</li>
+                                        <li>• 100 sentences per speaker</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold mb-3">Session Procedure</h3>
+                                <ol class="list-decimal list-inside space-y-3 text-gray-600">
+                                    <li>Speaker positioning with forehead rest</li>
+                                    <li>Equipment verification and signal check</li>
+                                    <li>Reading sentences displayed on screen</li>
+                                    <li>Individual recording of each sentence</li>
+                                    <li>Quality monitoring during recording</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quality Control -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Quality Control Measures</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="space-y-4">
+                            <p class="text-gray-600">
+                                Several measures were implemented to ensure high-quality recordings:
+                            </p>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Real-time monitoring of recording levels</li>
+                                    <li>• Background noise minimization</li>
+                                    <li>• Consistent positioning verification</li>
+                                    <li>• Manual review of recorded content</li>
+                                </ul>
+                            </div>
+                            <div class="bg-yellow-50 rounded-lg p-4 mt-4">
+                                <p class="text-gray-700">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    For the evaluation set, each utterance was carefully reviewed to ensure the recorded speech accurately matched the intended sentence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Navigation Footer -->
+                <footer class="border-t border-gray-200 pt-8 mt-12">
+                    <div class="flex justify-between items-center">
+                        <a href="software.html" class="text-blue-500 hover:text-blue-600 flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            Previous: Software
+                        </a>
+                        <a href="postprocessing.html" class="text-blue-500 hover:text-blue-600 flex items-center">
+                            Next: Post Processing
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

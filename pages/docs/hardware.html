@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPS Dataset - Hardware Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="/assets/js/include.js"></script>
+</head>
+<body class="bg-gray-50" data-page="hardware" data-section="documentation" >
+    <div class="flex min-h-screen">
+        <!-- Sidebar (Same as previous pages with updated active states) -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <main class="ml-64 flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <header class="mb-12">
+                    <div class="flex items-center gap-2 text-sm text-gray-600 mb-4">
+                        <a href="../documentation.html" class="hover:text-blue-600">Documentation</a>
+                        <i class="fas fa-chevron-right text-xs"></i>
+                        <span class="text-gray-900">Hardware</span>
+                    </div>
+                    <h1 class="text-4xl font-light mb-6">Hardware Configuration</h1>
+                    <p class="text-xl text-gray-600">
+                        Detailed information about the hardware setup used for the TAPS dataset collection,
+                        including microphone specifications and data acquisition systems.
+                    </p>
+                </header>
+
+                <!-- Overview Section -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Overview</h2>
+                    <div class="prose prose-gray max-w-none">
+                        <p>
+                            The TAPS dataset collection system consists of three main components: a throat microphone, 
+                            an acoustic microphone, and a microcontroller unit (MCU). This setup enables simultaneous 
+                            recording of both throat vibrations and acoustic speech signals.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Hardware Components -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Hardware Components</h2>
+                    
+                    <!-- Throat Microphone -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-microphone text-2xl text-blue-500 mr-3"></i>
+                                <h3 class="text-xl font-semibold">Throat Microphone</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-gray-600">
+                                    MEMS accelerometer-based throat microphone designed for accurate vibration measurement.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-medium mb-2">Specifications</h4>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>Model: TDK IIM-42652</li>
+                                            <li>Sampling Rate: 8 kHz</li>
+                                            <li>Resolution: 16-bit</li>
+                                            <li>Dynamic Range: ±4g</li>
+                                            <li>Interface: SPI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-medium mb-2">Physical Properties</h4>
+                                        <ul class="space-y-2 text-sm">
+                                            <li>Radius: 9 mm</li>
+                                            <li>Thickness: 1.7 mm</li>
+                                            <li>Weight: 760.2 mg</li>
+                                            <li>Board Type: FR-4 PCB</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Acoustic Microphone -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-microphone-alt text-2xl text-blue-500 mr-3"></i>
+                                <h3 class="text-xl font-semibold">Acoustic Microphone</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-gray-600">
+                                    High-quality acoustic microphone for reference speech recording.
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-medium mb-2">Specifications</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>Model: CUI Devices CMM-4030D-261</li>
+                                        <li>Sampling Rate: 16 kHz</li>
+                                        <li>Resolution: 24-bit</li>
+                                        <li>Interface: I2S</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MCU -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-microchip text-2xl text-blue-500 mr-3"></i>
+                                <h3 class="text-xl font-semibold">Microcontroller Unit (MCU)</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-gray-600">
+                                    Central processing unit for data acquisition and synchronization.
+                                </p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-medium mb-2">Specifications</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li>Model: STMicroelectronics STM32F301C8T6TR</li>
+                                        <li>Communication: RS232</li>
+                                        <li>Signal Delay: 0.87 ms</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recording Setup -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">Recording Setup</h2>
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <div class="prose prose-gray max-w-none">
+                            <ul class="space-y-4">
+                                <li>
+                                    <strong>Throat Microphone Placement:</strong>
+                                    <p>Positioned on the supraglottic area of the neck to capture vocal cord vibrations along with essential speech formants.</p>
+                                </li>
+                                <li>
+                                    <strong>Acoustic Microphone Position:</strong>
+                                    <p>Placed 30 cm in front of the speaker's face with a nylon filter to prevent pop noise.</p>
+                                </li>
+                                <li>
+                                    <strong>Environmental Controls:</strong>
+                                    <p>Recordings conducted in a semi-soundproof room with reflection filters to minimize ambient noise.</p>
+                                </li>
+                                <li>
+                                    <strong>Power Supply:</strong>
+                                    <p>DC battery powered to avoid 60 Hz hum noise from power lines.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technical Considerations -->
+                <section class="mb-12 bg-blue-50 rounded-lg p-6">
+                    <h2 class="text-xl font-semibold mb-4">Technical Considerations</h2>
+                    <div class="space-y-4">
+                        <p>When working with this hardware setup, consider the following:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Ensure proper throat microphone contact with the skin</li>
+                            <li>Monitor battery levels to maintain consistent recording quality</li>
+                            <li>Regular calibration of both microphones</li>
+                            <li>Verification of synchronization between devices</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Navigation Footer -->
+                <footer class="border-t border-gray-200 pt-8 mt-12">
+                    <div class="flex justify-between items-center">
+                        <a href="overview_docs.html" class="text-blue-500 hover:text-blue-600 flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            Back to Documentation
+                        </a>
+                        <a href="software.html" class="text-blue-500 hover:text-blue-600 flex items-center">
+                            Next: Software
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
