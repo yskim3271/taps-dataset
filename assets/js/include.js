@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // GitHub Pages의 repository 이름을 고려한 경로 설정
-    const baseUrl = '/taps.postech.ac.kr/'; // repository 이름에 맞게 수정
+    const baseUrl = '/taps-dataset'; // repository 이름에 맞게 수정
     
     // 사이드바 로드
     fetch(`${baseUrl}/components/sidebar.html`)
