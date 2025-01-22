@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // GitHub Pages의 repository 이름을 고려한 경로 설정
-    const baseUrl = '/taps-dataset'; // repository 이름에 맞게 수정
-    
     // 사이드바 로드
-    fetch(`${baseUrl}/components/sidebar.html`)
+    fetch('components/sidebar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('sidebar-container').innerHTML = data;
@@ -15,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // 네비게이션 아이템 스타일링
             const navItems = document.querySelectorAll('.nav-item');
             navItems.forEach(item => {
-
                 if (item.dataset.page === currentPage) {
                     item.classList.add('bg-gray-800', 'text-white');
                 } else {
@@ -28,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('sidebar-container').innerHTML = `
                 <div class="p-4 text-red-500">
                     <p>Error loading sidebar: ${error.message}</p>
-                    <p>Path: ${baseUrl}/components/sidebar.html</p>
+                    <p>Path: components/sidebar.html</p>
                 </div>
             `;
         });
@@ -54,4 +50,3 @@ function toggleSection(section) {
         button.querySelector('.fa-chevron-down').classList.toggle('rotate-180');
     }
 }
-
