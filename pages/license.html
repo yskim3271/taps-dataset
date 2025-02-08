@@ -12,7 +12,112 @@
 <body class="bg-gray-50" data-page="license" data-section="license">
     <div class="flex min-h-screen">
         <!-- Sidebar -->
-        <div id="sidebar-container"></div>
+        <aside class="w-64 bg-gray-900 text-white fixed h-full overflow-y-auto", id="sidebar-container">
+            <!-- Logo -->
+            <div class="p-6 border-b border-gray-800">
+                <div class="flex items-center justify-center">
+                    <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center">
+                        <i class="fas fa-microphone text-4xl text-blue-500"></i>
+                    </div>
+                </div>
+                <h1 class="text-center mt-4 text-xl font-bold">TAPS Dataset</h1>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="px-4 py-4">
+                <!-- Main Links -->
+                <div class="mb-6">
+                    <base href="/">
+                    <a href="index.html" class="nav-item flex items-center px-3 py-2 rounded-lg text-sm" data-page="home">
+                        <i class="fas fa-home w-4 mr-3"></i>
+                        Home
+                    </a>
+                </div>
+
+                <!-- Documentation Section -->
+                <div class="mb-6">
+                    <h2 class="text-sm font-semibold text-gray-400 mb-2">
+                        <button class="flex items-center justify-between w-full nav-section" data-section="documentation">
+                            Documentation
+                            <i class="fas fa-chevron-down transform transition-transform"></i>
+                        </button>
+                    </h2>
+                    <div class="ml-2 space-y-2 nav-section-content" data-section="documentation">
+                        <a href="pages/docs/overview_docs.html" class="nav-item block px-3 py-2 rounded-lg text-sm" data-page="docs-overview" data-section="documentation">
+                            <i class="fas fa-wave-square w-4 mr-3"></i>
+                            Overview
+                        </a>
+                        <a href="pages/docs/hardware.html" class="nav-item block px-3 py-2 rounded-lg text-sm" data-page="hardware" data-section="documentation">
+                            <i class="fas fa-microchip w-4 mr-3"></i>
+                            Hardware
+                        </a>
+                        <a href="pages/docs/software.html" class="nav-item block px-3 py-2 rounded-lg text-sm" data-page="software" data-section="documentation">
+                            <i class="fas fa-code w-4 mr-3"></i>
+                            Software
+                        </a>
+                        <a href="pages/docs/recording.html" class="nav-item block px-3 py-2 rounded-lg text-sm" data-page="recording" data-section="documentation">
+                            <i class="fas fa-record-vinyl w-4 mr-3"></i>
+                            Recording
+                        </a>
+                        <a href="pages/docs/postprocessing.html" class="nav-item block px-3 py-2 rounded-lg text-sm" data-page="postprocessing" data-section="documentation">
+                            <i class="fas fa-sliders-h w-4 mr-3"></i>
+                            Post Processing
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Speech Enhancement Section -->
+                <div class="mb-6">
+                    <h2 class="text-sm font-semibold text-gray-400 mb-2">
+                        <button class="flex items-center justify-between w-full nav-section" data-section="enhancement">
+                            Speech Enhancement
+                            <i class="fas fa-chevron-down transform transition-transform"></i>
+                        </button>
+                    </h2>
+                    <div class="ml-2 nav-section-content" data-section="enhancement">
+                        <a href="pages/SE/overview_se.html" class="nav-item block px-3 py-2 rounded-lg text-sm" data-page="se-overview" data-section="enhancement">
+                            <i class="fas fa-wave-square w-4 mr-3"></i>
+                            Overview
+                        </a>
+                        <a href="pages/SE/baselines.html" class="nav-item block px-3 py-2 rounded-lg text-sm" data-page="baselines" data-section="enhancement">
+                            <i class="fas fa-chart-line w-4 mr-3"></i>
+                            Baselines
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Other Links -->
+                <div class="space-y-2">
+                    <a href="pages/download.html" class="nav-item flex items-center px-3 py-2 rounded-lg text-sm" data-page="download">
+                        <i class="fas fa-download w-4 mr-3"></i>
+                        Download
+                    </a>
+                    <a href="pages/credits.html" class="nav-item flex items-center px-3 py-2 rounded-lg text-sm" data-page="credits">
+                        <i class="fas fa-users w-4 mr-3"></i>
+                        Credits
+                    </a>
+                    <a href="pages/license.html" class="nav-item flex items-center px-3 py-2 rounded-lg text-sm" data-page="license">
+                        <i class="fas fa-file-contract w-4 mr-3"></i>
+                        License
+                    </a>
+                </div>
+            </nav>
+
+            <!-- External Links -->
+            <div class="px-4 py-6 border-t border-gray-800 mt-6">
+                <div class="space-y-4">
+                    <a href="https://huggingface.co/datasets/yskim3271/Throat_and_Acoustic_Pairing_Speech_Dataset" class="flex items-center text-sm text-gray-400 hover:text-white">
+                        <i class="fas fa-database w-4 mr-3"></i>
+                        HuggingFace Dataset
+                    </a>
+
+                    <a href="#" class="flex items-center text-sm text-gray-400 hover:text-white">
+                        <i class="fas fa-book w-4 mr-3"></i>
+                        Paper
+                    </a>
+                </div>
+            </div>
+        </aside>
 
         <!-- Main Content -->
         <main class="ml-64 flex-1 p-8">
